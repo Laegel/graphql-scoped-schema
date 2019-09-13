@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "es2017",
+            "esnext.asynciterable",
+            "dom"
+        ],
+        "target": "es2017",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "declaration": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "resolveJsonModule": true,
+        "outDir": "dist",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "baseUrl": "./src/",
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

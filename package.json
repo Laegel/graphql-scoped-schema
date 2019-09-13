@@ -1,0 +1,17 @@
+{
+  "name": "trash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "install-peers",
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "graphql": "^14.5.4"
+  },
+  "devDependencies": {
+    "install-peers-cli": "^2.1.1",
+    "typescript": "^3.6.3"
+  }
+}
