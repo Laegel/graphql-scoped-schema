@@ -3,9 +3,7 @@ export const flatten = (args) => args.join(',');
 export const intersect = (a, b) => {
   let t;
   if (b.length > a.length) (t = b), (b = a), (a = t);
-  return a.filter(function(e) {
-    return b.indexOf(e) > -1;
-  });
+  return a.filter((e) => b.indexOf(e) > -1);
 };
 
 export const isFunction = (target) => typeof target === 'function';

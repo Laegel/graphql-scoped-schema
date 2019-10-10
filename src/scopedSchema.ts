@@ -68,9 +68,18 @@ class RemovableMarker {
       this.markNode(objectTypeDefinitionNode);
     }
   }
-}
 
-// Don't forget to handle InputTypeDefinition
+  private [Kind.INPUT_OBJECT_TYPE_DEFINITION](node) {
+    const namedTypeNodes = this.flatMap.getNodesByCriteria({
+      kind: Kind.NAMED_TYPE,
+      'name.value': node.name.value
+    });
+
+    namedTypeNodes.forEach((namedTypeNode) => {
+      this.markNode(namedTypeNode);
+    });
+  }
+}
 
 export default (schema: GraphQLSchema, selectors: Criteria[]) => {
   const printedSchema = printSchema(schema);
